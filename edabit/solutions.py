@@ -56,7 +56,25 @@ def find_perimeter(length, width):
 def calc_age(age):
 	return age * 365
 
-# 
+# Create a function that takes voltage and current and returns the calculated power.
+
+def circuit_power(voltage, current):
+	return voltage * current
+	
+# Given an n-sided regular polygon n, return the total sum of internal angles (in degrees).
+
+def sum_polygon(n):
+	return (n - 2) * 180
+
+# Create a function that takes a base number and an exponent number and returns the calculation.
+
+def calculate_exponent(num, exp):
+	return num ** exp
+
+# Create a function that takes a boolean variable flag and returns it as a string.
+
+def boolean_string(flag)
+	return str(flag)
 
 
 
