@@ -1,5 +1,8 @@
 # Python Principles
 
+# establishing environment
+import math
+
 """
 1) Write a function named capital_indexes. The function takes a single parameter, which is a string. 
 Your function should return a list of all the indexes in the string that have capital letters. 
@@ -18,3 +21,43 @@ Write a function named mid that takes a string as its parameter. Your function s
 If there is no middle letter, your function should return the empty string.
 For example, mid("abc") should return "b" and mid("aaaa") should return "".
 """
+
+def mid(word):
+    if len(word) % 2 == 0:
+        return ""
+    else:
+        mid_pos = math.floor(len(word) / 2)
+        return word[mid_pos]
+
+"""
+Write a function named online_count that takes one parameter. 
+The parameter is a dictionary that maps from strings of names to the string "online" or "offline", as seen above.
+Your function should return the number of people who are online.
+"""
+
+def online_count(statuses):
+    online_count = 0
+    for x in statuses:
+        if statuses[x] == 'online':
+            online_count += 1
+    return online_count
+
+"""
+Define a function, random_number, that takes no parameters. 
+The function must generate a random integer between 1 and 100, both inclusive, and return it.
+"""
+
+def random_number():
+    return random.randint(1, 100)
+
+"""
+Write a function named only_ints that takes two parameters. 
+Your function should return True if both parameters are integers, and False otherwise.
+"""
+
+def only_ints(p1, p2):
+    if type(p1) == int and type(p2) == int:
+        return True
+    else:
+        return False
+
