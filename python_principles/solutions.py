@@ -61,3 +61,14 @@ def only_ints(p1, p2):
     else:
         return False
 
+"""
+Define a function named double_letters that takes a single parameter. The parameter is a string. 
+Your function must return True if there are two identical letters in a row in the string, and False otherwise.
+"""
+
+def double_letters(string):
+    answer = False
+    for place, letter in enumerate(string[:len(string)-1]):
+        if letter == string[place + 1]:
+            answer = True
+    return answer
