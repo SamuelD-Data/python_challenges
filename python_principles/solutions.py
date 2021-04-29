@@ -97,3 +97,36 @@ def is_anagram(w1, w2):
         return False
     
 """
+Write a function that takes a list of lists and flattens it into a one-dimensional list. Name your function flatten. It should take a single parameter and return a list.
+"""
+
+def flatten(l_of_lists):
+    flat_list = []
+    for l in l_of_lists:
+        for i in l:
+            flat_list.append(i)
+    return flat_list
+
+"""
+__#10 Define a function named largest_difference that takes a list of numbers as its only parameter. Your function should compute and return the difference between the largest and smallest number in the list.__
+"""
+
+def largest_difference(numbers):
+    return max(numbers) - min(numbers)
+
+"""
+Define a function named div_3 that returns True if its single integer parameter is divisible by 3 and False otherwise.
+"""
+
+def div_3(num):
+    return num % 3 == 0
+
+"""
+Your task is to write a function that can translate from strings of length 2 to a tuple (row, column). Name your function get_row_col; it should take a single parameter which is a string of length 2 consisting of an uppercase letter and a digit.
+"""
+
+def get_row_col(coords):
+    board_dict = {'A' : 0, 'B' : 1, 'C' : 2, '1' : 0, '2' : 1, '3' : 2}
+    coords = list(coords)
+    return (board_dict[coords[1]],board_dict[coords[0]])
+
