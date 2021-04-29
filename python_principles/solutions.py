@@ -150,5 +150,87 @@ def consecutive_zeros(string):
     return max([len(x) for x in string.split('1')])
 
 """
+Define a function named all_equal that takes a list and checks whether all elements in the list are the same.
+"""
 
+def all_equal(l):
+    if len(set(l)) > 1:
+        return False
+    else:
+        return True
+
+"""
+Define a function named triple_and that takes three parameters and returns True only if they are all True and False otherwise.
+"""
+
+def triple_and(a, b, c):
+    return a and b and c
+
+"""
+Define a function named convert that takes a list of numbers as its only parameter and returns a list of each number converted to a string. For example, the call convert([1, 2, 3]) should return ["1", "2", "3"]. What makes this tricky is that your function body must only contain a single line of code.
+"""
+
+def convert(l):
+    return [str(num) for num in l]
+
+"""
+The built-in zip function "zips" two lists. Write your own implementation of this function. Define a function named zap. The function takes two parameters, a and b. These are lists. Your function should return a list of tuples. Each tuple should contain one item from the a list and one from b. You may assume a and b have equal lengths.
+"""
+
+def zap(a, b):
+    zap_list = []
+    for i in range(0,len(a)):
+        zap_list.append((a[i], b[i]))
+    return zap_list
+
+"""
+Write a function named validate that takes code represented as a string as its only parameter.
+
+Your function should check a few things:
+
+the code must contain the def keyword
+otherwise return "missing def"
+
+the code must contain the : symbol
+otherwise return "missing :"
+
+the code must contain ( and ) for the parameter list
+otherwise return "missing paren"
+
+the code must not contain ()
+otherwise return "missing param"
+
+the code must contain four spaces for indentation
+otherwise return "missing indent"
+
+the code must contain validate
+otherwise return "wrong name"
+
+the code must contain a return statement
+otherwise return "missing return"
+
+If all these conditions are satisfied, your code should return True.
+
+Here comes the twist: your solution must return True when validating itself.
+"""
+
+def validate(s):
+    p = '(' + ')'
+    if "def" not in s:
+        return "missing def"
+    elif ":" not in s:
+        return "missing :"
+    elif "(" not in s or ")" not in s:
+        return "missing paren"
+    elif p in s:
+        return "missing param"
+    elif "    " not in s:
+        return "missing indent"
+    elif "validate" not in s:
+        return "wrong name"
+    elif "return" not in s:
+        return "missing return"
+    else:
+        return True
+    
 """
