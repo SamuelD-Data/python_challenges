@@ -4,7 +4,7 @@
 import math
 
 """
-1) Write a function named capital_indexes. The function takes a single parameter, which is a string. 
+Write a function named capital_indexes. The function takes a single parameter, which is a string. 
 Your function should return a list of all the indexes in the string that have capital letters. 
 For example, calling capital_indexes("HeLlO") should return the list [0, 2, 4].
 """
@@ -108,7 +108,7 @@ def flatten(l_of_lists):
     return flat_list
 
 """
-__#10 Define a function named largest_difference that takes a list of numbers as its only parameter. Your function should compute and return the difference between the largest and smallest number in the list.__
+Define a function named largest_difference that takes a list of numbers as its only parameter. Your function should compute and return the difference between the largest and smallest number in the list.
 """
 
 def largest_difference(numbers):
@@ -130,3 +130,25 @@ def get_row_col(coords):
     coords = list(coords)
     return (board_dict[coords[1]],board_dict[coords[0]])
 
+"""
+Write a function named palindrome that takes a single string as its parameter. Your function should return True if the string is a palindrome, and False otherwise.
+"""
+
+def palindrome(word):
+    return word[::-1] == word
+
+"""
+Define a function named up_down that takes a single number as its parameter. Your function return a tuple containing two numbers; the first should be one lower than the parameter, and the second should be one higher.
+"""
+def up_down(num):
+    return ((num - 1), (num + 1))
+
+"""
+Define a function named consecutive_zeros that takes a single parameter, which is the string of zeros and ones. Your function should return the largest number of consecutive 0's
+"""
+def consecutive_zeros(string):
+    return max([len(x) for x in string.split('1')])
+
+"""
+
+"""
