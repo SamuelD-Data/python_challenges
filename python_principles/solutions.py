@@ -72,3 +72,28 @@ def double_letters(string):
         if letter == string[place + 1]:
             answer = True
     return answer
+
+"""
+Write a function named add_dots that takes a string and adds "." in between each letter. For example, calling add_dots("test") should return the string "t.e.s.t". Then, below the add_dots function, write another function named remove_dots that removes all dots from a string. For example, calling remove_dots("t.e.s.t") should return "test". If both functions are correct, calling remove_dots(add_dots(string)) should return back the original string for any string.
+"""
+
+def add_dots(string):
+    string = string.replace('','.')
+    string = string[1:-1]
+    return string
+
+def remove_dots(string):
+    string = string.replace('.', '')
+    return string
+
+"""
+Define a function named count that takes a single parameter. The parameter is a string. The string will contain a single word divided into syllables by hyphens.
+"""
+
+def is_anagram(w1, w2):
+    if sorted(w1) == sorted(w2):
+        return True
+    else:
+        return False
+    
+"""
