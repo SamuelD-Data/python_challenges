@@ -51,20 +51,33 @@ def lt(*arg):
 Sample filename : abc.java 
 Output : java
 
+7.
+def checkext(file):
+    print(file.split('.')[1])
 
 8. Write a Python program to display the first and last colors from the following list. 
 color_list = ["Red","Green","White" ,"Black"]
 
+8.
+def firstlast(colors):
+    print(colors[0], ',', colors[-1])
 
 9. Write a Python program to display the examination schedule. (extract the date from exam_st_date). 
 exam_st_date = (11, 12, 2014)
 Sample Output : The examination will start from : 11 / 12 / 2014
 
+9.
+def examsched(nums):
+    print(nums[0],'/', nums[1],'/', nums[2])
 
 10. Write a Python program that accepts an integer (n) and computes the value of n+nn+nnn. 
 Sample value of n is 5 
 Expected Result : 615
 
+10.
+def prodsum(n):
+    n = str(n)
+    print(int(n) + int(n * 2) + int(n * 3))
 
 11. Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s). 
 Sample function : abs()
@@ -72,10 +85,20 @@ Expected Result :
 abs(number) -> number
 Return the absolute value of the argument.
 
+11.
+def docs(f):
+    print(f.__doc__)
 
 12. Write a Python program to print the calendar of a given month and year.
 Note : Use 'calendar' module. 
 
+12. 
+import calendar 
+
+def calendarmaker(m, y):
+    print(calendar.month(y, m))
+    
+calendarmaker(12, 2020)
 
 13. Write a Python program to print the following 'here document'. 
 Sample string :
@@ -84,6 +107,8 @@ This
 is a ....... multi-line
 heredoc string --------> example
 
+13.
+print('a string that you "don\'t" have to escape\nThis\nis a  ....... multi-line\nheredoc string --------> example')
 
 14. Write a Python program to calculate number of days between two dates.
 Sample dates : (2014, 7, 2), (2014, 7, 11)
