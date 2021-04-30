@@ -209,9 +209,19 @@ def valcheck(v, l):
 
 26. Write a Python program to create a histogram from a given list of integers. 
 
+import matplotlib.pyplot as plt
+
+def histplotter(l):
+    plt.hist(l)
+    plt.show()
 
 27. Write a Python program to concatenate all elements in a list into a string and return it. 
 
+def concatlist(l):
+    a = ''
+    for x in l:
+        a += str(x)
+    return a
 
 28. Write a Python program to print all even numbers from a given numbers list in the same order and stop the printing if any numbers that come after 237 in the sequence. 
 Sample numbers list :
@@ -223,6 +233,8 @@ numbers = [
     958,743, 527
     ]
 
+28.
+[x for x in numbers if x % 2 == 0 and x < 237]
 
 29. Write a Python program to print out a set containing all the colors from color_list_1 which are not present in color_list_2. 
 Test Data : 
@@ -231,8 +243,14 @@ color_list_2 = set(["Red", "Green"])
 Expected Output : 
 {'Black', 'White'}
 
+29.
+[x for x in color_list_1 if x not in color_list_2]
 
 30. Write a Python program that will accept the base and height of a triangle and compute the area. 
+
+30.
+def triarea(b, h):
+    print((b * h) / 2)
 
 
 31. Write a Python program to compute the greatest common divisor (GCD) of two positive integers. 
