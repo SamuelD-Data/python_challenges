@@ -114,21 +114,53 @@ print('a string that you "don\'t" have to escape\nThis\nis a  ....... multi-line
 Sample dates : (2014, 7, 2), (2014, 7, 11)
 Expected output : 9 days 
 
+14.
+from datetime import date
+
+def datedifference(d1, d2):
+    print((date(d2[0], d2[1], d2[2]) - date(d1[0], d1[1], d1[2])).days)
+    
+datedifference((2014, 7, 2), (2014, 7, 11))
 
 15. Write a Python program to get the volume of a sphere with radius 6.
 
+15.
+print(4/3 * math.pi * 6**3)
 
 16. Write a Python program to get the difference between a given number and 17, if the number is greater than 17 return double the absolute difference. 
 
+16.
+def nprob(n):
+    if n <= 17:
+        print(17 - n)
+    else:
+        print(abs(17 - n) * 2)
 
 17. Write a Python program to test whether a number is within 100 of 1000 or 2000. 
 
+def rangecheck(n):
+    if n >= 900 and n <= 1100:
+        print('close to 1000')
+    elif n >= 1900 and n <= 2100:
+        print('close to 2000')
+    else:
+        print('close to neither 1000 or 2000')
 
 18. Write a Python program to calculate the sum of three given numbers, if the values are equal then return three times of their sum. 
 
+def combothree(a, b, c):
+    if a == b and b == c:
+        print((a + b + c) * 3)
+    else:
+        return 'not equal'
 
 19. Write a Python program to get a new string from a given string where "Is" has been added to the front. If the given string already begins with "Is" then return the string unchanged. 
 
+def addis(s):
+    if s[:1] == 'Is':
+        print(s)
+    else:
+        print('Is' + s)
 
 20. Write a Python program to get a string which is n (non-negative integer) copies of a given string. 
 
