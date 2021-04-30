@@ -252,21 +252,51 @@ Expected Output :
 def triarea(b, h):
     print((b * h) / 2)
 
-
 31. Write a Python program to compute the greatest common divisor (GCD) of two positive integers. 
 
+31.
+def gcdfinder(a, b):
+    smallnum = min([a, b])
+    divnums = []
+    for x in range(1,smallnum + 1):
+        if a % x == 0 and b % x == 0:
+            divnums.append(x)
+    return(max(divnums))
 
 32. Write a Python program to get the least common multiple (LCM) of two positive integers. 
 
+32.
+def lcmfinder(a, b):
+    gcd = gcdfinder(a, b)
+    numerator = abs(a * b)
+    print(numerator / gcd)
 
 33. Write a Python program to sum of three given integers. However, if two values are equal sum will be zero. 
 
+33.
+def triplesum(a, b, c):
+    if a == b or a == c or b == c:
+        print(0)
+    else:
+        print(a + b + c)
 
 34. Write a Python program to sum of two given integers. However, if the sum is between 15 to 20 it will return 20. 
 
+34.
+def sumtwo(a, b):
+    summed = a + b
+    if summed >= 15 and summed <= 20:
+        return 20
+    else:
+        return summed
 
 35. Write a Python program that will return true if the two given integer values are equal or their sum or difference is 5. 
 
+def check3cons(a, b):
+    if a == b or a + b == 5 or abs(a - b) == 5:
+        return True
+    else:
+        return False
 
 36. Write a Python program to add two objects if both objects are an integer type. 
 
