@@ -138,6 +138,7 @@ def nprob(n):
 
 17. Write a Python program to test whether a number is within 100 of 1000 or 2000. 
 
+17.
 def rangecheck(n):
     if n >= 900 and n <= 1100:
         print('close to 1000')
@@ -148,6 +149,7 @@ def rangecheck(n):
 
 18. Write a Python program to calculate the sum of three given numbers, if the values are equal then return three times of their sum. 
 
+18.
 def combothree(a, b, c):
     if a == b and b == c:
         print((a + b + c) * 3)
@@ -156,6 +158,7 @@ def combothree(a, b, c):
 
 19. Write a Python program to get a new string from a given string where "Is" has been added to the front. If the given string already begins with "Is" then return the string unchanged. 
 
+19.
 def addis(s):
     if s[:1] == 'Is':
         print(s)
@@ -164,25 +167,45 @@ def addis(s):
 
 20. Write a Python program to get a string which is n (non-negative integer) copies of a given string. 
 
+20.
+def ncopy(n, s):
+    print(n * s)
 
 21. Write a Python program to find whether a given number (accept from the user) is even or odd, print out an appropriate message to the user. 
 
+21.
+def evenodd(n):
+    if n % 2 == 1:
+        print(n, 'is odd')
+    else:
+        print(n, 'is even')
 
 22. Write a Python program to count the number 4 in a given list. 
 
+22.
+def countfour(l):
+    return len([x for x in l if x == 4])
 
 23. Write a Python program to get the n (non-negative integer) copies of the first 2 characters of a given string. Return the n copies of the whole string if the length is less than 2. 
 
+23.
+def twocopy(n, s):
+    print(s[:2] * n)
 
 24. Write a Python program to test whether a passed letter is a vowel or not. 
 
+24.
+def isvowel(l):
+    return l.lower() in ['a', 'e', 'i', 'o', 'u']
 
 25. Write a Python program to check whether a specified value is contained in a group of values. 
 Test Data : 
 3 -> [1, 5, 8, 3] : True
 -1 -> [1, 5, 8, 3] : False
 
-
+25.
+def valcheck(v, l):
+    return v in l
 
 26. Write a Python program to create a histogram from a given list of integers. 
 
