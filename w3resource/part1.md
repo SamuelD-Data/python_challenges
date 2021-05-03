@@ -404,63 +404,48 @@ def sort_ints(a, b, c):
     
 __Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
-72. Write a Python program to get the details of math module. 
-
-
-73. Write a Python program to calculate midpoints of a line. 
-
-
-74. Write a Python program to hash a word. 
-
-
-75. Write a Python program to get the copyright information. 
-
-
-76. Write a Python program to get the command-line arguments (name of the script, the number of arguments, arguments) passed to a script. 
-
-
-77. Write a Python program to test whether the system is a big-endian platform or little-endian platform. 
-
-
-78. Write a Python program to find the available built-in modules. 
-
-
-79. Write a Python program to get the size of an object in bytes. 
-
-
-80. Write a Python program to get the current value of the recursion limit. 
-
-
 81. Write a Python program to concatenate N strings. 
 
+81.
+def concat_n(n, s):
+    print(s * n)
 
 82. Write a Python program to calculate the sum over a container. 
 
+82.
+def sumcon(con):
+    print(sum(con))
 
 83. Write a Python program to test whether all numbers of a list is greater than a certain number. 
 
+def check_greater(l, n):
+    check = False
+    for x in l:
+        if x > n:
+            check = True
+    return check
 
 84. Write a Python program to count the number occurrence of a specific character in a string. 
 
-
-85. Write a Python program to check whether a file path is a file or a directory. 
-
-
-86. Write a Python program to get the ASCII value of a character. 
-
-
-87. Write a Python program to get the size of a file. 
-
+def occ_count(s, c):
+    counter = 0
+    for x in s:
+        if x == c:
+            counter += 1
+    return counter
 
 88. Given variables x=30 and y=20, write a Python program to print "30+20=50". 
 
+x = 30
+y = 20
+print(x, '+', y, '=', x + y)
 
 89. Write a Python program to perform an action if a condition is true. 
 Given a variable name, if the value is 1, display the string "First day of a Month!" and do nothing if the value is not equal.
 
-
-90. Write a Python program to create a copy of its own source code. 
-
+def val_check(v):
+    if v == 1:
+        print('First day of a Month!')
 
 91. Write a Python program to swap two variables. 
 
