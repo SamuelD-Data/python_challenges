@@ -335,82 +335,47 @@ def intcalc(amt, i, yrs):
 def distcalc(x1, y1, x2, y2):
     print(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
 
-
-41. Write a Python program to check whether a file exists. 
-
-
-42. Write a Python program to determine if a Python shell is executing in 32bit or 64bit mode on OS. 
-
-
-43. Write a Python program to get OS name, platform and release information. 
-
-
-44. Write a Python program to locate Python site-packages. 
-
-
-45. Write a python program to call an external command in Python. 
-
-
-46. Write a python program to get the path and name of the file that is currently executing. 
-
-
-47. Write a Python program to find out the number of CPUs using. 
-
-
-48. Write a Python program to parse a string to Float or Integer. 
-
-
-49. Write a Python program to list all files in a directory in Python. 
-
-
-50. Write a Python program to print without newline or space. 
-
-
-51. Write a Python program to determine profiling of Python programs. 
-Note: A profile is a set of statistics that describes how often and for how long various parts of the program executed. These statistics can be formatted into reports via the pstats module. 
-
-
-52. Write a Python program to print to stderr. 
-
-
-53. Write a python program to access environment variables. 
-
-
-54. Write a Python program to get the current username 
-
-
-55. Write a Python to find local IP addresses using Python's stdlib 
-
-
-56. Write a Python program to get height and width of the console window. 
-
-
-57. Write a Python program to get execution time for a Python method. 
-
+__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
 58. Write a python program to find the sum of the first n positive integers. 
 
+def sum_ints(num):
+    num_sum = 0
+    for x in range(0, num + 1):
+        num_sum += x
+    return num_sum
 
 59. Write a Python program to convert height (in feet and inches) to centimeters. 
 
+def height_convert(ft, inches):
+    return (ft * 30.48) + (inches * 2.54)
+
+height_convert(1,3)
 
 60. Write a Python program to calculate the hypotenuse of a right angled triangle. 
 
+def hypot_right(a, b):
+    return math.sqrt((a ** 2) + (b ** 2))
 
 61. Write a Python program to convert the distance (in feet) to inches, yards, and miles. 
 
+def convert_ft(ft):
+    print('inches:', ft * 12, '\nyards:', ft * 3, '\nmiles:', ft * 5280)
 
 62. Write a Python program to convert all units of time into seconds. 
 
+def convert_to_sec(t):
+    print(t,'hour(s) =', t * 3600, 'seconds\n', t, 'minute(s) =', t * 60, 'seconds')
 
-63. Write a Python program to get an absolute file path. 
-
-
-64. Write a Python program to get file creation and modification date/times. 
-
+__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
 65. Write a Python program to convert seconds to day, hour, minutes and seconds. 
 
+def second_conv(s):
+    print('seconds:', s)
+    print('minutes:', s / 60)
+    print('hours:', s / 3600)
+    print('days:', s / 86400)
 
 66. Write a Python program to calculate body mass index. 
 
