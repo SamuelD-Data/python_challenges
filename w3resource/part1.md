@@ -1,3 +1,5 @@
+__Note: Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
+
 1. Write a Python program to print the following string. 
 Sample String : "Twinkle, twinkle, little star':
 
@@ -335,8 +337,6 @@ def intcalc(amt, i, yrs):
 def distcalc(x1, y1, x2, y2):
     print(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
 
-__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
-
 58. Write a python program to find the sum of the first n positive integers. 
 
 def sum_ints(num):
@@ -366,8 +366,6 @@ def convert_ft(ft):
 
 def convert_to_sec(t):
     print(t,'hour(s) =', t * 3600, 'seconds\n', t, 'minute(s) =', t * 60, 'seconds')
-
-__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
 65. Write a Python program to convert seconds to day, hour, minutes and seconds. 
 
@@ -401,8 +399,6 @@ def sort_ints(a, b, c):
     numlist = [a, b, c]
     numlist.sort()
     return numlist
-    
-__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
 81. Write a Python program to concatenate N strings. 
 
@@ -418,6 +414,7 @@ def sumcon(con):
 
 83. Write a Python program to test whether all numbers of a list is greater than a certain number. 
 
+83.
 def check_greater(l, n):
     check = False
     for x in l:
@@ -427,6 +424,7 @@ def check_greater(l, n):
 
 84. Write a Python program to count the number occurrence of a specific character in a string. 
 
+84.
 def occ_count(s, c):
     counter = 0
     for x in s:
@@ -436,6 +434,7 @@ def occ_count(s, c):
 
 88. Given variables x=30 and y=20, write a Python program to print "30+20=50". 
 
+88.
 x = 30
 y = 20
 print(x, '+', y, '=', x + y)
@@ -443,88 +442,70 @@ print(x, '+', y, '=', x + y)
 89. Write a Python program to perform an action if a condition is true. 
 Given a variable name, if the value is 1, display the string "First day of a Month!" and do nothing if the value is not equal.
 
+89.
 def val_check(v):
     if v == 1:
         print('First day of a Month!')
 
 91. Write a Python program to swap two variables. 
 
-
-92. Write a Python program to define a string containing special characters in various forms. 
-
-
-93. Write a Python program to get the identity of an object. 
-
-
-94. Write a Python program to convert a byte string to a list of integers. 
-
+91.
+def vswap(a, b):
+    c = a
+    a = b
+    b = c
+    return a, b
 
 95. Write a Python program to check whether a string is numeric. 
 
-
-96. Write a Python program to print the current call stack. 
-
-
-97. Write a Python program to list the special variables used within the language. 
-
-
-98. Write a Python program to get the system time. 
-
-Note : The system time is important for debugging, network information, random number seeds, or something as simple as program performance.
-
-
-99. Write a Python program to clear the screen or terminal. 
-
-
-100. Write a Python program to get the name of the host on which the routine is running. 
-
-
-101. Write a Python program to access and print a URL's content to the console. 
-
-
-102. Write a Python program to get system command output. 
-
-
-103. Write a Python program to extract the filename from a given path. 
-
-
-104. Write a Python program to get the effective group id, effective user id, real group id, a list of supplemental group ids associated with the current process. 
-Note: Availability: Unix.
-
-
-105. Write a Python program to get the users environment. 
-
-
-106. Write a Python program to divide a path on the extension separator. 
-
-
-107. Write a Python program to retrieve file properties. 
-
-
-108. Write a Python program to find path refers to a file or directory when you encounter a path name. 
-
+95.
+def sign_check(n):
+    if n == 0:
+        print('zero')
+    elif n > 0:
+        print('positive')
+    else:
+        print('negative')
 
 109. Write a Python program to check if a number is positive, negative or zero. 
 
-
-110. Write a Python program to get numbers divisible by fifteen from a list using an anonymous function. 
-
-
-111. Write a Python program to make file lists from current directory using a wildcard. 
-
-
+109.
+def sign_check(n):
+    if n == 0:
+        print('zero')
+    elif n > 0:
+        print('positive')
+    else:
+        print('negative')
+        
 112. Write a Python program to remove the first item from a specified list. 
 
+112.
+def drop_first(l):
+    return l[1:]
 
-113. Write a Python program to input a number, if it is not a number generate an error message. 
 
+113. Write a Python program to input a number, if it is not a number generate an error message.
+
+113.
+def numcheck(n):
+    if type(n) not in [int, float]:
+        print('error')
+    else:
+        print('is numerical')
 
 114. Write a Python program to filter the positive numbers from a list. 
 
+def allpos(l):
+    return [n for n in l if n < 0]
 
 115. Write a Python program to compute the product of a list of integers (without using for loop). 
 
+from numpy import product
 
+def lprod(l):
+    return product(l)
+    
 116. Write a Python program to print Unicode characters. 
 
 
