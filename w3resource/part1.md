@@ -379,21 +379,30 @@ def second_conv(s):
 
 66. Write a Python program to calculate body mass index. 
 
+def calc_bmi(h, w):
+    return (w / (h**2))
 
 67. Write a Python program to convert pressure in kilopascals to pounds per square inch, a millimeter of mercury (mmHg) and atmosphere pressure. 
 
+def conv_kp(kp):
+    print('psi:', kp * 0.145038)
+    print('mmhg:', kp * 7.50062)
+    print('atmospheric pressure:', kp * 0.00986923)
 
 68. Write a Python program to calculate the sum of the digits in an integer. 
 
+def digit_sum(i):
+    digits = [int(d) for d in str(i)]
+    return sum(digits)
 
 69. Write a Python program to sort three integers without using conditional statements and loops. 
 
-
-70. Write a Python program to sort files by date. 
-
-
-71. Write a Python program to get a directory listing, sorted by creation date. 
-
+def sort_ints(a, b, c):
+    numlist = [a, b, c]
+    numlist.sort()
+    return numlist
+    
+__Skipping questions that I don't find useful, or which require me to print sensitive information (operating system, file paths, etc.)__
 
 72. Write a Python program to get the details of math module. 
 
