@@ -300,21 +300,40 @@ def check3cons(a, b):
 
 36. Write a Python program to add two objects if both objects are an integer type. 
 
+36.
+def addobj(a, b):
+    if type(a) == int and type(b) == int:
+        return a + b
+    else:
+        return ('one or more arguments are not int type')
 
 37. Write a Python program to display your details like name, age, address in three different lines. 
 
+37.
+def naa(name, age, address):
+    print(name,'\n', age, '\n', address)
 
 38. Write a Python program to solve (x + y) * (x + y). 
 Test Data : x = 4, y = 3
 Expected Output : (4 + 3) ^ 2) = 49
 
-
+38.
+def xyprob(x, y):
+    print ((x+y) * (x+y))
+    
 39. Write a Python program to compute the future value of a specified principal amount, rate of interest, and a number of years. 
 Test Data : amt = 10000, int = 3.5, years = 7
 Expected Output : 12722.79
 
+39.
+def intcalc(amt, i, yrs):
+    print(amt * i * yrs)
 
 40. Write a Python program to compute the distance between the points (x1, y1) and (x2, y2). 
+
+40.
+def distcalc(x1, y1, x2, y2):
+    print(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
 
 
 41. Write a Python program to check whether a file exists. 
