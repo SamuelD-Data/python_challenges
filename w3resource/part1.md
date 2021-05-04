@@ -617,5 +617,23 @@ def maxmin(l):
 
 149. Write a Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller than the specified number. 
 
+149.
+def cubesum(n):
+    total = 0
+    for i in range(1, n):
+        total += i**3
+    print(total)
 
 150. Write a Python function to find a distinct pair of numbers whose product is odd from a sequence of integer values. 
+
+150.
+def oddprod(l):
+    a = l
+    b = l
+    numlist = []
+    for x in a:
+        for y in b:
+            if ((x * y) % 2) == 1:
+                numlist.append([x,y])
+    print(numlist)
+
