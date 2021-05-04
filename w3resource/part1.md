@@ -524,6 +524,7 @@ else:
 
 124. Write a Python program to check whether multiple variables have the same value. 
 
+124.
 a = 2
 b = 3
 
@@ -534,6 +535,7 @@ else:
 
 128. Write a Python program to check whether lowercase letters exist in a string. 
 
+128.
 def lowerccheck(s):
     val = False
     for x in s:
@@ -542,11 +544,13 @@ def lowerccheck(s):
 
 129. Write a Python program to add trailing and leading zeroes to a string. 
 
+129.
 def addzeros(s):
     return '0' + s + '0'
 
 138. Write a Python program to convert true to 1 and false to 0. 
 
+138.
 def swapbool(b):
     if b == True:
         return 1
@@ -555,24 +559,61 @@ def swapbool(b):
 
 139. Write a Python program to valid a IP address. 
 
-
-
-141. Write a python program to convert decimal to hexadecimal. 
-Sample decimal number: 30, 4
-Expected output: 1e, 04 
-
+139.
+def ipvalidate(i):
+    splitl = []
+    status = True
+    for x in i.split('.'):
+        splitl.append(x)
+    if len(splitl) != 4:
+        print('octet amount not equal to 4')
+        status = False
+    elif len(splitl) == 4:
+        for o in splitl:
+            if len(o) > 3:
+                print('too many numbers in octect:', o)
+                status = False
+    if status == True:
+        print('Ip Valid')
 
 144. Write a Python program to check whether variable is of integer or string. 
 
+144.
+def typecheck(v):
+    if type(v) == str:
+        print('is string')
+    elif type(v) == int:
+        print('is integer')
+    else:
+        print('not integer or string')
 
 145. Write a Python program to test if a variable is a list or tuple or a set. 
 
+145.
+def varcheck2(v):
+    if type(v) == list:
+        print('is list')
+    elif type(v) == tuple:
+        print('is tuple')
+    elif type(v) == set:
+        print('is set')
+    else:
+        print('is not list, tuple or set')
 
 147. Write a Python function to check whether a number is divisible by another number. Accept two integers values form the user. 
 
+147.
+def divcheck(a, b):
+    if a % b != 0:
+        print('not evenly divisible')
+    else:
+        print('evenly divisible')
 
 148. Write a Python function to find the maximum and minimum numbers from a sequence of numbers. 
 
+148.
+def maxmin(l):
+    return max(l), min(l)
 
 149. Write a Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller than the specified number. 
 
