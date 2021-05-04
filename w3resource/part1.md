@@ -506,23 +506,9 @@ from numpy import product
 def lprod(l):
     return product(l)
     
-116. Write a Python program to print Unicode characters. 
-
-
-117. Write a Python program to prove that two string variables of same value point same memory location. 
-
-
-118. Write a Python program to create a bytearray from a list. 
-
-
-119. Write a Python program to display a floating number in specified numbers. 
-
-
 120. Write a Python program to format a specified string to limit the number of characters to 6. 
 
-
 121. Write a Python program to determine whether variable is defined or not. 
-
 
 122. Write a Python program to empty a variable without destroying it. 
 
@@ -531,50 +517,17 @@ d = {"x":200}
 Expected Output : 0
 {}
 
-
-
-123. Write a Python program to determine the largest and smallest integers, longs, floats. 
-
-
 124. Write a Python program to check whether multiple variables have the same value. 
-
 
 125. Write a Python program to sum of all counts in a collections.
 
-
-126. Write a Python program to get the actual module object for a given object. 
-
-
-127. Write a Python program to check whether an integer fits in 64 bits. 
-
-
 128. Write a Python program to check whether lowercase letters exist in a string. 
-
 
 129. Write a Python program to add trailing and leading zeroes to a string. 
 
-
 130. Write a Python program to use double quotes to display strings. 
 
-
 131. Write a Python program to split a variable length string into variables. 
-
-
-132. Write a Python program to list home directory without absolute path. 
-
-
-133. Write a Python program to calculate the time runs (difference between start and current time) of a program. 
-
-
-134. Write a Python program to input two integers in a single line. 
-
-
-135. Write a Python program to print a variable without spaces between values. 
-Sample value : x =30
-Expected output : Value of x is "30" 
-
-
-136. Write a Python program to find files and skip directories of a given directory. 
 
 
 137. Write a Python program to extract single key-value pair of a dictionary in variables. 
@@ -586,27 +539,10 @@ Expected output : Value of x is "30"
 139. Write a Python program to valid a IP address. 
 
 
-140. Write a Python program to convert an integer to binary keep leading zeros. 
-Sample data : x=12
-Expected output : 00001100
-0000001100
-
 
 141. Write a python program to convert decimal to hexadecimal. 
 Sample decimal number: 30, 4
 Expected output: 1e, 04 
-
-
-142. Write a Python program to find the operating system name, platform and platform release date. 
-Operating system name:
-posix 
-Platform name: 
-Linux 
-Platform release:
-4.4.0-47-generic 
-
-
-143. Write a Python program to determine if the python shell is executing in 32bit or 64bit mode on operating system. 
 
 
 144. Write a Python program to check whether variable is of integer or string. 
@@ -615,14 +551,10 @@ Platform release:
 145. Write a Python program to test if a variable is a list or tuple or a set. 
 
 
-146. Write a Python program to find the location of Python module sources. 
-
-
 147. Write a Python function to check whether a number is divisible by another number. Accept two integers values form the user. 
 
 
 148. Write a Python function to find the maximum and minimum numbers from a sequence of numbers. 
-Note: Do not use built-in functions.
 
 
 149. Write a Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller than the specified number. 
