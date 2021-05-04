@@ -508,33 +508,50 @@ def lprod(l):
     
 120. Write a Python program to format a specified string to limit the number of characters to 6. 
 
-121. Write a Python program to determine whether variable is defined or not. 
+120.
+def trim_string(s):
+    return s[0:6]
 
-122. Write a Python program to empty a variable without destroying it. 
+121. Write a Python program to determine whether variable is defined or not.
 
-Sample data: n=20
-d = {"x":200}
-Expected Output : 0
-{}
+121.
+try:
+    v
+except NameError:
+    print("variable has not been assigned any value")
+else:
+    print("variable has been assigned value:", v)
 
 124. Write a Python program to check whether multiple variables have the same value. 
 
-125. Write a Python program to sum of all counts in a collections.
+a = 2
+b = 3
+
+if a == b:
+    print('variables have matching value')
+else:
+    print('variables have different values')
 
 128. Write a Python program to check whether lowercase letters exist in a string. 
 
+def lowerccheck(s):
+    val = False
+    for x in s:
+        if x.islower() == True:
+            print('lowercase letter found:', x)
+
 129. Write a Python program to add trailing and leading zeroes to a string. 
 
-130. Write a Python program to use double quotes to display strings. 
-
-131. Write a Python program to split a variable length string into variables. 
-
-
-137. Write a Python program to extract single key-value pair of a dictionary in variables. 
-
+def addzeros(s):
+    return '0' + s + '0'
 
 138. Write a Python program to convert true to 1 and false to 0. 
 
+def swapbool(b):
+    if b == True:
+        return 1
+    else:
+        return 0
 
 139. Write a Python program to valid a IP address. 
 
