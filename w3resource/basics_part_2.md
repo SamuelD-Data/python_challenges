@@ -60,82 +60,62 @@ longstring.value_counts()
 
 7. Write a Python program to count the number of each character of a given text of a text file. 
 
+7.
+longstring = "The river is famous to the fish. The loud voice is famous to silence, which knew it would inherit the earth before anybody said so."
 
-8. Write a Python program to get the top stories from Google news. 
+longstring = longstring.replace('.', '')
+longstring = longstring.replace(',', '')
 
+longstring =[x for x in longstring]
 
-9. Write a Python program to get a list of locally installed Python modules. 
+edict = {}
 
-
-10. Write a Python program to display some information about the OS where the script is running. 
-
-
-11. Write a Python program to check the sum of three elements (each from an array) from three arrays is equal to a target value. Print all those three-element combinations. 
-Sample data:
-/*
-X = [10, 20, 20, 20]
-Y = [10, 20, 30, 40]
-Z = [10, 30, 40, 20]
-target = 70
-*/ 
-
+for x in longstring:
+    edict[x] = 0
+    
+for x in longstring:
+    edict[x] += 1
 
 12. Write a Python program to create all possible permutations from a given collection of distinct numbers.
 
+12.
+from itertools import permutations as perms
 
-13. Write a Python program to get all possible two digit letter combinations from a digit (1 to 9) string. 
-string_maps = {
-"1": "abc",
-"2": "def",
-"3": "ghi",
-"4": "jkl",
-"5": "mno",
-"6": "pqrs",
-"7": "tuv",
-"8": "wxy",
-"9": "z"
-}
-
-
-14. Write a Python program to add two positive integers without using the '+' operator. 
-Note: Use bit wise operations to add two numbers.
-
-
-15. Write a Python program to check the priority of the four operators (+, -, *, /). 
-
+def permer(n):
+    return list(perms(n))
 
 16. Write a Python program to get the third side of right angled triangle from two given sides. 
 
+16.
+import math 
 
-17. Write a Python program to get all strobogrammatic numbers that are of length n. 
-A strobogrammatic number is a number whose numeral is rotationally symmetric, so that it appears the same when rotated 180 degrees. In other words, the numeral looks the same right-side up and upside down (e.g., 69, 96, 1001).
-For example,
-Given n = 2, return ["11", "69", "88", "96"].
-Given n = 3, return ['818', '111', '916', '619', '808', '101', '906', '609', '888', '181', '986', '689']
-
+def ratri(a, b):
+    return math.sqrt(a**2 + b**2)
 
 18. Write a Python program to find the median among three given numbers. 
 
-
-19. Write a Python program to find the value of n where n degrees of number 2 are written sequentially in a line without spaces. 
-
-
-20. Write a Python program to find the number of zeros at the end of a factorial of a given positive number. 
-Range of the number(n): (1 <= n <= 2*109).
-
-
-21. Write a Python program to find the number of notes (Sample of notes: 10, 20, 50, 100, 200 and 500 ) against a given amount. 
-Range - Number of notes(n) : n (1 <= n <= 1000000).
-
-
-22. Write a Python program to create a sequence where the first four members of the sequence are equal to one, and each successive term of the sequence is equal to the sum of the four previous ones. Find the Nth member of the sequence. 
-
-
-23. Write a Python program that accept a positive number and subtract from this number the sum of its digits and so on. Continues this operation until the number is positive. 
-
+18.
+def findmed(l):
+    l.sort()
+    if len(l) % 2 == 0:
+        rpoint = int((len(l) / 2))
+        lpoint = int(rpoint - 1)
+        return (l[lpoint] + l[rpoint]) / 2
+    else:
+        return l[math.floor(len(l) / 2)]
 
 24. Write a Python program to find the number of divisors of a given integer is even or odd. 
 
+24.
+def signofdiv(n):
+    nlist = []
+    for x in range(1, n + 1):
+        if n % x == 0:
+            nlist.append(x)
+    if len(nlist) % 2 == 0:
+        return 'divisor count is even'
+    if len(nlist) % 2 == 1:
+        return 'divisor count is odd'
 
 25. Write a Python program to find the digits which are absent in a given mobile number. 
 
