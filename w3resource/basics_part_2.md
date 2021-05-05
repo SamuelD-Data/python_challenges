@@ -119,40 +119,38 @@ def signofdiv(n):
 
 25. Write a Python program to find the digits which are absent in a given mobile number. 
 
-
-26. Write a Python program to compute the summation of the absolute difference of all distinct pairs in a given array (non-decreasing order). 
-Sample array: [1, 2, 3]
-Then all the distinct pairs will be:
-1 2
-1 3 
-2 3
-
-
-27. Write a Python program to find the type of the progression (arithmetic progression/geometric progression) and the next successive member of a given three successive members of a sequence. 
-According to Wikipedia, an arithmetic progression (AP) is a sequence of numbers such that the difference of any two successive members of the sequence is a constant. For instance, the sequence 3, 5, 7, 9, 11, 13, . . . is an arithmetic progression with common difference 2. For this problem, we will limit ourselves to arithmetic progression whose common difference is a non-zero integer.
-On the other hand, a geometric progression (GP) is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed non-zero number called the common ratio. For example, the sequence 2, 6, 18, 54, . . . is a geometric progression with common ratio 3. For this problem, we will limit ourselves to geometric progression whose common ratio is a non-zero integer.
-
-
-28. Write a Python program to print the length of the series and the series from the given 3rd term, 3rd last term and the sum of a series. 
-Sample Data:
-Input third term of the series: 3
-Input 3rd last term: 3
-Sum of the series: 15
-Length of the series: 5
-Series:
-1 2 3 4 5 
-
+25.
+def mobilecheck(n):
+    validnumber = True
+    for place, nums in enumerate(n.split('-')):
+        if place <= 1:
+            if len(nums) < 3:
+                print('not enough numbers in at least one section of mobile number')
+                validnumber = False
+        if place == 2:
+            if len(nums) < 4:
+                print('not enough numbers in at least one section of mobile number')
+                validnumber = False
+    if validnumber == True:
+        print('Phone number is missing no numbers')
 
 29. Write a Python program to find common divisors between two numbers in a given pair. 
 
+29.
+def comdiv(a , b):
+    anums = [x for x in range(1, a + 1) if a % x == 0]
+    bnums = [x for x in range(1, b + 1) if b % x == 0]
+    cds = [x for x in anums if x in bnums]
+    return cds
 
 30. Write a Python program to reverse the digits of a given number and add it to the original, If the sum is not a palindrome repeat this procedure. 
 Note: A palindrome is a word, number, or other sequence of characters which reads the same backward as forward, such as madam or racecar.
 
-
-31. Write a Python program to count the number of carry operations for each of a set of addition problems. 
-According to Wikipedia " In elementary arithmetic, a carry is a digit that is transferred from one column of digits to another column of more significant digits. It is part of the standard algorithm to add numbers together by starting with the rightmost digits and working to the left. For example, when 6 and 7 are added to make 13, the "3" is written to the same column and the "1" is carried to the left".
-
+30.
+def palcheck(n):
+    while n != int(str(n)[::-1]):
+        n = n + int(str(n)[::-1])
+    return n
 
 32. Write a python program to find heights of the top three building in descending order from eight given buildings. 
 Input:
@@ -171,16 +169,10 @@ Heights of the top three buildings:
 39
 37
 
-
-33. Write a Python program to compute the digit number of sum of two given integers. 
-Input:
-Each test case consists of two non-negative integers x and y which are separated by a space in a line.
-0 <= x, y <= 1,000,000
-Input two integers(a b): 
-5 7
-Sum of two integers a and b.:
-2
-
+32.
+def findmaxh(l):
+    l.sort(reverse = True)
+    return l[0:3]
 
 34. Write a Python program to check whether three given lengths (integers) of three sides form a right triangle. Print "Yes" if the given sides form a right triangle otherwise print "No". 
 Input:
@@ -189,6 +181,13 @@ Integers separated by a single space.
 Input three integers(sides of a triangle)
 8 6 7
 No
+
+34.
+def rtricheck(a, b, c):
+    if (a**2 + b**2) == c**2:
+        return "Yes"
+    else:
+        return "No"
 
 
 35. Write a Python program which solve the equation: 
