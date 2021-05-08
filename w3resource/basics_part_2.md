@@ -441,9 +441,14 @@ Sample Output:
 [2, 6]
 [3, 3]
 
+84.
+def negativepositive(l):
+    negativecount = len([x for x in l if x % 2 == 1])
+    positivesum = sum([x for x in l if x % 2 == 0])
+    return [negativecount, positivesum]
 
 85. From Wikipedia:
-An isogram (also known as a "nonpattern word") is a logological term for a word or phrase without a repeating letter. It is also used by some people to mean a word or phrase in which each letter appears the same number of times, not necessarily just once. Conveniently, the word itself is an isogram in both senses of the word, making it autological.
+An isogram (also known as a "nonpattern word") is a logological term for a word or phrase without a repeating letter.
 Write a Python program to check whether a given string is an "isogram" or not. 
 Sample Input:
 ("w3resource")
@@ -455,6 +460,14 @@ False
 True
 True
 False
+
+85.
+def isogramcheck(s):
+    sl = [l for l in s]
+    if len(set(sl)) == len(sl):
+        print('is isogram')
+    else:
+        print('is not isogram')
 
 
 86. Write a Python program to count the number of equal numbers from three given integers. 
@@ -468,6 +481,16 @@ Sample Output:
 2
 0
 3
+
+86.
+def threeintcheck(l):
+    count = len(set(l))
+    if count == 1:
+        print('all numbers match')
+    elif count == 2:
+        print('2 numbers match')
+    else:
+        print('no numbers match')
 
 
 87. Write a Python program to check whether a given employee code is exactly 8 digits or 12 digits. Return True if the employee code is valid and False if it's not. 
@@ -484,6 +507,15 @@ False
 True
 False
 
+87.
+def empcodecheck(s):
+    if len(s) == 8 or len(s) == 12:
+        return True
+    else:
+        return False
+    
+empcodecheck('12345678')
+
 
 88. Write a Python program that accept two strings and test if the letters in the second string are present in the first string. 
 Sample Input:
@@ -498,6 +530,14 @@ False
 True
 False
 True
+
+88.
+def lettercheck(s1, s2):
+    status = True
+    for x in s2:
+        if x not in s1:
+            status = False
+    return status
 
 
 89. Write a Python program to compute the sum of the three lowest positive numbers from a given list of numbers. 
