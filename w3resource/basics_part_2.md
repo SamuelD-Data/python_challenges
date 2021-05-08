@@ -363,6 +363,11 @@ Sample Output:
 
 [4, 22, 8, 20, 24, 12, 30, 98, 28, 48]
 
+81.
+import random
+
+print(random.sample([n for n in range(1, 100) if n % 2 == 0], 10))
+
 82. Write a Python program to calculate the median from a list of numbers. 
 Sample Input:
 [1,2,3,4,5]
@@ -379,6 +384,16 @@ Sample Output:
 3.3
 22.3
 
+import math
+
+def findmed(l):
+    l.sort()
+    if len(l) % 2 == 0:
+        rpoint = int((len(l) / 2))
+        lpoint = int(rpoint - 1)
+        return (l[lpoint] + l[rpoint]) / 2
+    else:
+        return l[math.floor(len(l) / 2)]
 
 83. Write a Python program to test whether a given number is symmetrical or not. 
 A number is symmetrical when it is equal of its reverse.
@@ -392,6 +407,26 @@ True
 True
 False
 True
+
+83.
+def symcheck(n):
+    if len(str(n)) % 2 == 1:
+        halfp = int(math.ceil(len(str(n)) / 2))
+        firsth = str(n)[:halfp]
+        secondh = str(n)[halfp - 1:]
+        if secondh[::-1] != firsth:
+            print('not symmetrical')
+        else:
+            print('symmetrical')
+        print(firsth, secondh)
+    else:
+        halfp = int(len(str(n)) / 2)
+        firsth = (str(n)[0: halfp]) 
+        secondh = (str(n)[halfp:])
+        if (secondh[::-1]) != (firsth):
+            print('not symmetrical')
+        else:
+            print('symmetrical')
 
 
 84. Write a Python program that accept a list of numbers and create a list to store the count of negative number in first element and store the sum of positive numbers in second element. 
