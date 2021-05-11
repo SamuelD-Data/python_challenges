@@ -642,6 +642,12 @@ Sample Output:
 20
 6
 
+94.
+def largeprod(l):
+    l.sort
+    return l[-1] * l[-2]
+
+
 
 95. Write a Python program to check whether every even index contains an even number and every odd index contains odd number of a given list. 
 Sample Input:
@@ -653,42 +659,17 @@ True
 False
 True
 
-
-96. Write a Python program to check whether a given number is a narcissistic number or not. 
-
-If you are a reader of Greek mythology, then you are probably familiar with Narcissus. He was a hunter of exceptional beauty that he died because he was unable to leave a pool after falling in love with his own reflection. That's why I keep myself away from pools these days (kidding).
-In mathematics, he has kins by the name of narcissistic numbers - numbers that can't get enough of themselves. In particular, they are numbers that are the sum of their digits when raised to the power of the number of digits.
-For example, 371 is a narcissistic number; it has three digits, and if we cube each digits 33 + 73 + 13 the sum is 371. Other 3-digit narcissistic numbers are
-153 = 13 + 53 + 33
-370 = 33 + 73 + 03
-407 = 43 + 03 + 73.
-There are also 4-digit narcissistic numbers, some of which are 1634, 8208, 9474 since
-1634 = 14+64+34+44
-8208 = 84+24+04+84
-9474 = 94+44+74+44
-It has been proven that there are only 88 narcissistic numbers (in the decimal system) and that the largest of which is
-115,132,219,018,763,992,565,095,597,973,971,522,401
-has 39 digits.
-
-Ref.: //https://bit.ly/2qNYxo2
-Sample Input:
-(153)
-(370)
-(407)
-(409)
-(1634)
-(8208)
-(9474)
-(9475)
-Sample Output:
-True
-True
-True
-False
-True
-True
-True
-False
+95.
+def indexcheck(l):
+    status = True
+    for x in range(0, len(l)):
+        if x % 2 == 0:
+            if l[x] % 2 == 1:
+                status = False
+        else:
+            if l[x] % 2 == 0:
+                status = False
+    return status
 
 
 97. Write a Python program to find the highest and lowest number from a given string of space separated integers. 
@@ -701,6 +682,11 @@ Sample Output:
 (0, -77)
 (0, 0)
 
+97.
+def findminmax(s):
+    s = s.split(' ')
+    nums = [int(x) for x in s]
+    return min(nums), max(nums)
 
 98. Write a Python program to check whether a sequence of numbers has an increasing trend or not. 
 Sample Input:
@@ -716,6 +702,11 @@ False
 True
 False
 
+98.
+def checktrend(l):
+    sortedl = l.copy()
+    sortedl.sort()
+    return sortedl == l
 
 99. Write a Python program to find the position of the second occurrence of a given string in another given string. If there is no such string return -1. 
 Sample Input:
