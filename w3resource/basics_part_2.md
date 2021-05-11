@@ -550,6 +550,12 @@ Sample Output:
 6
 6
 
+89.
+def compthree(l):
+    l.sort()
+    nums = sum(l[0:3])
+    return nums
+
 
 90. Write a Python program to replace all but the last five characters of a given string into "*" and returns the new masked string. 
 Sample Input:
@@ -561,6 +567,11 @@ Sample Output:
 ******bcdef
 12345
 
+90.
+def staradd(s):
+    lastfive = s[-5:]
+    stars = '*' * (len(s) - 5)
+    return stars + lastfive
 
 91. Write a Python program to count the number of arguments in a given function. 
 Sample Input:
@@ -578,6 +589,10 @@ Sample Output:
 4
 1
 
+91.
+def countarg(*arg):
+    return len([x for x in arg])
+
 
 92. Write a Python program to compute cumulative sum of numbers of a given list. 
 Note: Cumulative sum = sum of itself + all previous numbers in the said list.
@@ -590,6 +605,14 @@ Sample Output:
 [1, 3, 6, 10, 15]
 [0, 1, 3, 6, 10, 15]
 
+92.
+def cumulativesum(l):
+    runsum = 0
+    newlist = []
+    for x in l:
+        runsum += x
+        newlist.append(runsum)
+    return newlist
 
 93. Write a Python program to find the middle character(s) of a given string. If the length of the string is odd return the middle character and return the middle two characters if the string length is even. 
 Sample Input:
@@ -600,6 +623,13 @@ Sample Output:
 th
 H
 av
+
+93.
+def midc(s):
+    if len(s) % 2 == 1:
+        return s[math.floor(len(s) / 2)]
+    else:
+        return s[math.floor(len(s) / 2) - 1], s[math.floor(len(s) / 2)]
 
 
 94. Write a Python program to find the largest product of the pair of adjacent elements from a given list of integers. 
