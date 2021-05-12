@@ -708,15 +708,6 @@ def checktrend(l):
     sortedl.sort()
     return sortedl == l
 
-99. Write a Python program to find the position of the second occurrence of a given string in another given string. If there is no such string return -1. 
-Sample Input:
-("The quick brown fox jumps over the lazy dog", "the")
-("the quick brown fox jumps over the lazy dog", "the")
-Sample Output:
--1
-31
-
-
 100. Write a Python program to compute the sum of all items of a given array of integers where each integer is multiplied by its index. Return 0 if there is no number. 
 Sample Input:
 [1,2,3,4]
@@ -727,6 +718,12 @@ Sample Output:
 -20
 0
 
+100.
+def sumindexprod(l):
+    numlist = []
+    for i in range(0, len(l)):
+        numlist.append(i * l[i])
+    return sum(numlist)
 
 101. Write a Python program to find the name of the oldest student from a given dictionary containing the names and ages of a group of students. 
 Sample Input:
@@ -736,6 +733,12 @@ Sample Output:
 Nidia Dominique
 Becki Saunder
 
+101.
+def findoldest(d):
+    maxval = max(d.values())
+    for x in d:
+        if d[x] == maxval:
+            print(x)
 
 102. Write a Python program to create a new string with no duplicate consecutive letters from a given string. 
 Sample Input:
@@ -748,6 +751,15 @@ PYTHON
 Python
 Java
 PHP
+
+102.
+def noduplicates(s):
+    s = ("PPYYYTTHON")
+    new_s = ''
+    for l in s:
+        if l not in new_s:
+            new_s += l
+    return new_s
 
 
 103. Write a Python program to check whether two given lines are parallel or not. 
@@ -762,6 +774,16 @@ Sample Input:
 Sample Output:
 True
 False
+
+103.
+def pandigital(n):
+    nums = list(str(1234567890))
+    n = list(str(n))
+    status = True
+    for i in nums:
+        if i not in n:
+            status = False
+    print(status)
 
 
 104. Write a Python program to find the lucky number(s) in a given matrix. 
