@@ -760,62 +760,7 @@ def noduplicates(s):
         if l not in new_s:
             new_s += l
     return new_s
-
-
-103. Write a Python program to check whether two given lines are parallel or not. 
-Note: Parallel lines are two or more lines that never intersect. Parallel Lines are like railroad tracks that never intersect.
-The General Form of the equation of a straight line is: ax + by = c
-The said straight line is represented in a list as [a, b, c]
-Example of two parallel lines: 
-x + 4y = 10 and x + 4y = 14
-Sample Input:
-([2,3,4], [2,3,8])
-([2,3,4], [4,-3,8])
-Sample Output:
-True
-False
-
-103.
-def pandigital(n):
-    nums = list(str(1234567890))
-    n = list(str(n))
-    status = True
-    for i in nums:
-        if i not in n:
-            status = False
-    print(status)
-
-
-104. Write a Python program to find the lucky number(s) in a given matrix. 
-Sample Input:
-Original matrix: [[1, 2], [2, 3]]
-Lucky number(s) in the said matrix: [2]
-Original matrix: [[1, 2, 3], [3, 4, 5]]
-Lucky number(s) in the said matrix: [3]
-Original matrix: [[7, 5, 6], [3, 4, 4], [6, 5, 7]]
-Lucky number(s) in the said matrix: [5]
-
-
-105. Write a Python program to check whether a given sequence is linear, quadratic or cubic. 
-Sequences are sets of numbers that are connected in some way.
-Linear sequence:
-A number pattern which increases or decreases by the same amount each time is called a linear sequence. The amount it increases or decreases by is known as the common difference.
-Quadratic sequence:
-In quadratic sequence, the difference between each term increases, or decreases, at a constant rate.
-Cubic sequence:
-Sequences where the 3rd difference are known as cubic sequence.
-Sample Input:
-[0,2,4,6,8,10]
-[1,4,9,16,25]
-[0,12,10,0,-12,-20]
-[1,2,3,4,5]
-Sample Output:
-Linear Sequence
-Quadratic Sequence
-Cubic Sequence
-Linear Sequence
-
-
+    
 106. Write a Python program to test whether a given integer is pandigital number or not. 
 From Wikipedia,
 In mathematics, a pandigital number is an integer that in a given base has among its significant digits each digit used in the base at least once.
@@ -836,6 +781,16 @@ True
 True
 False
 
+106.
+def pandigital(n):
+    nums = list(str(1234567890))
+    n = list(str(n))
+    status = True
+    for i in nums:
+        if i not in n:
+            status = False
+    print(status)
+
 
 107. Write a Python program to check whether a given number is Oddish or Evenish. 
 A number is called "Oddish" if the sum of all of its digits is odd, and a number is called "Evenish" if the sum of all of its digits is even.
@@ -852,6 +807,13 @@ Oddish
 Evenish
 Oddish
 
+107.
+def ish(n):
+    n = sum([int(x) for x in list(str(n))])
+    if n % 2 == 1:
+        print('Oddish')
+    else:
+        print('Evenish')
 
 108. Write a Python program that takes three integers and check whether the last digit of first number * the last digit of second number = the last digit of third number. 
 Sample Input:
@@ -867,6 +829,12 @@ True
 False
 False
 
+108.
+def lastprod(a,b,c):
+    lasta = int(list(str(a))[-1])
+    lastb = int(list(str(b))[-1])
+    lastc = int(list(str(c))[-1])
+    return lasta * lastb == lastc
 
 109. Write a Python program find the indices of all occurrences of a given item in a given list. 
 Sample Input:
@@ -878,6 +846,13 @@ Sample Output:
 [0, 3, 7, 8]
 [3, 6]
 
+109.
+def occurences(l, n):
+    indices = []
+    for i in range(0, len(l)):
+        if n == l[i]:
+            indices.append(i)
+    return indices
 
 110. Write a Python program to remove two duplicate numbers from a given number of list. 
 Sample Input:
@@ -889,6 +864,9 @@ Sample Output:
 [1, 3, 4, 5]
 [1, 2, 3, 4, 5]
 
+110.
+def remove_dupes(l):
+    return set(l)
 
 111. Write a Python program to check whether two given circles (given center (x,y) and radius) are intersecting. Return true for intersecting otherwise false. 
 Sample Input:
