@@ -868,15 +868,6 @@ Sample Output:
 def remove_dupes(l):
     return set(l)
 
-111. Write a Python program to check whether two given circles (given center (x,y) and radius) are intersecting. Return true for intersecting otherwise false. 
-Sample Input:
-([1,2, 4], [1,2, 8])
-([0,0, 2], [10,10, 5])
-Sample Output:
-True
-False
-
-
 112. Write a Python program to compute the digit distance between two integers. 
 The digit distance between two numbers is the absolute value of the difference of those numbers.
 For example, the distance between 3 and -3 on the number line given by the |3 - (-3) | = |3 + 3 | = 6 units
@@ -893,6 +884,9 @@ Sample Output:
 1
 11
 
+112.
+def distance_check(a, b):
+    return abs(a) - abs(b)
 
 113. Write a Python program to reverse all the words which have even length. 
 Sample Input:
@@ -902,6 +896,15 @@ Sample Output:
 The quick brown fox jumps revo the yzal dog
 nohtyP Exercises
 
+113.
+def rev_even(s):
+    new_s = []
+    for x in s.split():
+        if len(x) % 2 == 0:
+            new_s.append(x[::-1])
+        else:
+            new_s.append(x)
+    return new_s
 
 114. Write a Python program to print letters from the English alphabet from a-z and A-Z. 
 Sample Input:
@@ -913,6 +916,10 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Alphabet from A-Z:
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
 
+114.
+import string
+
+print(string.ascii_lowercase[:26], string.ascii_uppercase[:26])
 
 115. Write a Python program to generate and prints a list of numbers from 1 to 10. 
 Sample Input:
@@ -921,6 +928,8 @@ Sample Output:
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
+115.
+[i for i in range(1,11)]
 
 116. Write a Python program to identify nonprime numbers between 1 to 100 (integers). Print the nonprime numbers. 
 Sample Input:
